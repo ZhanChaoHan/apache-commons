@@ -20,7 +20,7 @@ public class CipherByteBufferExampleTest {
 	
 	@Test
 	public void test1() throws InvalidKeyException, InvalidAlgorithmParameterException, ShortBufferException, BadPaddingException, IllegalBlockSizeException, IOException {
-		String eCode=cbbe.encrypt("HelloWorld");
+		String eCode=cbbe.encrypt("123456");
 	}
 	
 	@Test
