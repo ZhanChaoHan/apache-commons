@@ -28,24 +28,23 @@ public class CircularFifoQueueTest {
 		
 		cfq.peek();//取队头数据不删除
 		
-		cfq.poll ();//取队头数据删除,如果队列为空返回null
-		cfq.remove ();//取队头数据删除,如果队列为空抛异常
+		cfq.poll();//取队头数据删除,如果队列为空返回null
+		cfq.remove();//取队头数据删除,如果队列为空抛异常
 		
-		cfq.clear ();//清空队列
+		cfq.clear();//清空队列
 		
-		cfq.maxSize ();//最大容量
-		cfq.size ();//实际存储大小
+		cfq.maxSize();//最大容量
+		cfq.size();//实际存储大小
 		
-		cfq.isEmpty ();//是否为空
-		cfq.isAtFullCapacity ();//是否满队
+		cfq.isEmpty();//是否为空
+		cfq.isAtFullCapacity();//是否满队
 		
-		cfq.isFull ();//但对于 CircularFifoQueue，isFull 方法将始终返回 false，因为队列始终可以接受新元素：
+		cfq.isFull();//但对于 CircularFifoQueue，isFull 方法将始终返回 false，因为队列始终可以接受新元素：
 		
 		
 		print();
 		
-		cfq.get ( 1 );//下标读取
-		
+		cfq.get(1);//下标读取
 		
 	}
 }

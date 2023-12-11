@@ -26,11 +26,9 @@ public class SynchronizedQueueThread implements Runnable{
                 +"休眠："+sleepTime+"毫秒\t\t"
                 + peo.getName ()+"\t\t"+peo.getAge () );
             }
-        }
-        catch ( InterruptedException e ) {
+        }catch ( InterruptedException e ) {
             e.printStackTrace();
         }
         
     }
-
 }

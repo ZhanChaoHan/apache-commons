@@ -10,7 +10,7 @@ import com.jachs.commons.collections4.queue.thread.SynchronizedQueueThread;
 import com.jachs.commons.vo.People;
 
 /***
- * 
+ * 线程池形式消费队列
  * @author zhanchaohan
  *
  */
