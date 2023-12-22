@@ -15,8 +15,7 @@ public class Demo2 {
     /**
      * 加密算法
      */
-    public  String desEncript(String clearText, String originKey) throws Exception
-    {
+    public  String desEncript(String clearText, String originKey) throws Exception{
         Cipher cipher= Cipher.getInstance("DES"); /*提供加密的方式：DES*/
         SecretKeySpec key=getKey(originKey);  /*对密钥进行操作，产生16个48位长的子密钥*/
         cipher.init(Cipher.ENCRYPT_MODE,key); /*初始化cipher，选定模式，这里为加密模式，并同时传入密钥*/
@@ -28,8 +27,7 @@ public class Demo2 {
     /**
      * 解密算法
      */
-    public  String desDecript(String cipherText, String originKey) throws Exception
-    {
+    public  String desDecript(String cipherText, String originKey) throws Exception{
         Cipher cipher=Cipher.getInstance("DES");   /*初始化加密方式*/
         Key key=getKey(originKey);  /*获取密钥*/
         cipher.init(Cipher.DECRYPT_MODE,key);  /*初始化操作方式*/
@@ -41,15 +39,13 @@ public class Demo2 {
     /**
      * 获取密钥算法
      */
-    public static SecretKeySpec getKey(String originKey)
-    {
+    public static SecretKeySpec getKey(String originKey){
         byte[] buffer=new byte[8];
         byte[] originBytes=originKey.getBytes();
         /**
          * 防止输入的密钥长度超过64位
          */
-        for(int i=0;i<8&&i<originBytes.length;i++)
-        {
+        for(int i=0;i<8&&i<originBytes.length;i++){
             buffer[i]=originBytes[i];  /*如果originBytes不足8,buffer剩余的补零*/
         }
         SecretKeySpec key=new SecretKeySpec(buffer,"DES"); /*第一个参数是密钥字节数组，第二个参数是加密方式*/
