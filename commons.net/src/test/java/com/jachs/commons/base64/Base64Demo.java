@@ -115,12 +115,11 @@ public class Base64Demo {
                 "jgNGAvPAi8bxtgMmMbsdQEGJLpNunp7mVJy8OYRJC7qCSOu3yXXyYlhbVNV+G2GvJLXDBW6qtrTq\r\n" + 
                 "lt26aIF44eDg/EILWAh4VWGiyEgtmsHHZ0pIVpBiX6L9W1ARvBjqwDG4cucfJX6ENuu10ViVszB9\r\n" + 
                 "R/DseRVxRWYG2IjG5z254cw4I9xQfO/Jr+2bnud/7L6dZ2l6PHp0skjZHSOeMZd2WigIiICIiAiI\r\n" + 
-                "gIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIg//Z\r\n" + 
-                "\r\n";
-        OutputStream os=new FileOutputStream(Base64Demo.class.getResource ( "" ).getPath ()+File.separator+"as.jpg");
+                "gIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIg//Z\r\n";
+                
+        OutputStream os=new FileOutputStream(Base64Demo.class.getResource("").getPath()+File.separator+"as.jpg");
         
-        
-        os.write (  base.decode ( enStr.getBytes ()));
-        os.close ();
+        os.write(base.decode(enStr.getBytes()));
+        os.close();
     }
 }

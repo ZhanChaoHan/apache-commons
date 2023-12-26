@@ -57,24 +57,24 @@ public class FtpClientUtil {
         try {  
             ftp = new FTPClient();  
             ftp.addProtocolCommandListener( new PrintCommandListener( new PrintWriter( System.out ), true ) );  
-            //连接ftp服务器  
-            connect( ftp );  
-            //设置属性  
-            setProperty( ftp );  
+            //连接ftp服务器
+            connect(ftp);
+            //设置属性
+            setProperty(ftp);
             //上传文件  
-            upload( ftp, remoteFileName, locaFileName );  
-            //退出  
-            logout( ftp );  
-        } catch (Exception e) {  
-            e.printStackTrace();  
-        }finally {  
-            if (ftp.isConnected()) {  
-                try {  
-                    ftp.disconnect();  
+            upload(ftp, remoteFileName, locaFileName);
+            //退出
+            logout(ftp);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }finally {
+            if (ftp.isConnected()) {
+                try {
+                    ftp.disconnect();
                 } catch (IOException f) {  
-                }  
-            }  
-        }  
+                }
+            }
+        }
 
     }  
     /**上传文件 
@@ -82,18 +82,18 @@ public class FtpClientUtil {
      * @param locaFileName 本地文件名称 
      */  
     public void download(String remoteFileName,String locaFileName){  
-        FTPClient ftp=null;   
+        FTPClient ftp=null; 
         try {  
-            ftp = new FTPClient();  
+            ftp = new FTPClient();
             ftp.addProtocolCommandListener( new PrintCommandListener( new PrintWriter( System.out ), true ) );  
-            //连接ftp服务器  
-            connect( ftp );  
-            //设置属性  
-            setProperty( ftp );  
-            //下载文件  
-            download( ftp, remoteFileName, locaFileName );  
-            //退出  
-            logout( ftp );  
+            //连接ftp服务器
+            connect(ftp);
+            //设置属性
+            setProperty(ftp);
+            //下载文件
+            download( ftp, remoteFileName, locaFileName );
+            //退出
+            logout(ftp);
         } catch (Exception e) {  
             e.printStackTrace();  
         }finally {  
@@ -113,13 +113,13 @@ public class FtpClientUtil {
         try {  
             ftp = new FTPClient();  
             ftp.addProtocolCommandListener( new PrintCommandListener( new PrintWriter( System.out ), true ) );  
-            //连接ftp服务器  
-            connect( ftp );  
-            //设置属性  
-            setProperty( ftp );  
-            //创建文件夹  
-            mkdir( ftp, remotePathName);  
-            //退出  
+            //连接ftp服务器
+            connect(ftp);
+            //设置属性
+            setProperty(ftp);
+            //创建文件夹
+            mkdir(ftp,remotePathName);
+            //退出
             logout( ftp );  
         } catch (Exception e) {  
             e.printStackTrace();  
@@ -179,10 +179,7 @@ public class FtpClientUtil {
     private void upload(FTPClient ftp, String remoteFileName,  
             String locaFileName) throws Exception{  
         //上传  
-        InputStream input;  
-
-        input = new FileInputStream(locaFileName);  
-
+        InputStream input = new FileInputStream(locaFileName);  
         ftp.storeFile(remoteFileName, input);  
 
         input.close();  

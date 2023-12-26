@@ -17,7 +17,7 @@ public class WhoisClientDemo {
     public void t1() throws SocketException, IOException {
         WhoisClient whois= new WhoisClient();
         whois.connect(WhoisClient.DEFAULT_HOST);
-        System.out.println(whois.query("baidu.com"));
+        System.out.println(whois.query("qq.com"));
         whois.disconnect();
     }
 }

@@ -72,8 +72,9 @@ public class TelnetTest {
 	public boolean findStr(String str) {
 		for (;;) {
 			String msg = readTelnetMsg();
-			if (msg.indexOf(str) != -1)
+			if (msg.indexOf(str) != -1) {
 				return true;
+			}
 		}
 	}
 
