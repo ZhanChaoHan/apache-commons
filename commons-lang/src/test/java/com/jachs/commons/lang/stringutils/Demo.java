@@ -219,12 +219,12 @@ public class Demo {
     @Test
     public void testAlpha() {
         //判断是否只包含unicode字符（注意：汉字也是unicode字符）
-        System.out.println ( StringUtils.isAlpha ( "爱我中华" ) );//true
-        System.out.println ( StringUtils.isAlpha ( "爱我 大中华" ) );//false
+        System.out.println ( StringUtils.isAlpha ( "爱打打中我为单位华" ) );//true
+        System.out.println ( StringUtils.isAlpha ( "爱我 的为当前华" ) );//false
         System.out.println ( StringUtils.isAlpha ( "&*(" ) );//false
         //判断是否只包含unicode字符及空格
-        System.out.println ( StringUtils.isAlphaSpace ( "爱我中华" ) );//true
-        System.out.println ( StringUtils.isAlphaSpace ( "爱我 大中华" ) );//true
+        System.out.println ( StringUtils.isAlphaSpace ( "爱我中我单位华" ) );//true
+        System.out.println ( StringUtils.isAlphaSpace ( "爱我 我短期单无中华" ) );//true
         System.out.println ( StringUtils.isAlphaSpace ( "123456" ) );//false
         //判断是否只包含unicode字符、数字及空格
         System.out.println ( StringUtils.isAlphanumeric("中国8681") );//true

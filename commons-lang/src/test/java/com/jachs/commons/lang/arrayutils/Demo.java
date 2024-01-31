@@ -30,7 +30,7 @@ public class Demo {
 		}
 		// 添加全部
 		String[] st = new String[] { "我", "是" };
-		String[] st1 = new String[] { "中", "国", "人" };
+		String[] st1 = new String[] { "龙", "而非", "超人" };
 		String[] st2 = arrayUtils.addAll(st, st1);
 		for (String string : st2) {
 			System.out.println(string);
