@@ -19,6 +19,7 @@ import org.apache.commons.crypto.utils.Utils;
  *
  */
 public class CipherByteArrayExample {
+    
 	public static void main(final String[] args) throws Exception {
 		final SecretKeySpec key = new SecretKeySpec(getUTF8Bytes("1234567890123456"), "AES");
 		final IvParameterSpec iv = new IvParameterSpec(getUTF8Bytes("1234567890123456"));

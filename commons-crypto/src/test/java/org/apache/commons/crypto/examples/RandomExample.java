@@ -25,14 +25,12 @@ public class RandomExample {
 
 		// Gets the 'CryptoRandom' instance.
 		try (CryptoRandom random = CryptoRandomFactory.getCryptoRandom(properties)) {
-
 			// Show the actual class (may be different from the one requested)
 			System.out.println(random.getClass().getCanonicalName());
 
 			// Generate random bytes and places them into the byte arrays.
 			random.nextBytes(key);
 			random.nextBytes(iv);
-
 		}
 
 		// Show the generated output
